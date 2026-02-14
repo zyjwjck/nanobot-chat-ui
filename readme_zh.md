@@ -301,6 +301,7 @@ nanobot-chat-ui 的实现离不开以下项目的优秀工作：
 - [nanobot 文档](https://github.com/HKUDS/nanobot)
 - [ollama-webui-lite 文档](https://github.com/ollama-webui/ollama-webui-lite)
 - [Ollama Web UI 文档](https://github.com/ollama-webui/ollama-webui)
+- 部分图标来自 [remixicon.com](https://remixicon.com/)
 
 ---
 

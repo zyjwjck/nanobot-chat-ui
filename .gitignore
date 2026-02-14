@@ -34,9 +34,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
 # 缓存文件
 .eslintcache
 .prettiercache
+提示词
 
 # Python 编译产物
 __pycache__/

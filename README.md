@@ -301,6 +301,7 @@ If you have any questions or need assistance, please refer to the documentation 
 - [nanobot Documentation](https://github.com/HKUDS/nanobot)
 - [ollama-webui-lite Documentation](https://github.com/ollama-webui/ollama-webui-lite)
 - [Ollama Web UI Documentation](https://github.com/ollama-webui/ollama-webui)
+- some of the icons are from [remixicon.com](https://remixicon.com/)
 
 ---
 

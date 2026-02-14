@@ -1,54 +1,54 @@
 @echo off
 chcp 65001 > nul
 echo ================================
-echo nanobot-chat-ui 启动脚本 (Windows)
+echo nanobot-chat-ui Start Script (Windows)
 echo ================================
 
-:: 检查虚拟环境是否存在
+:: Check if virtual environment exists
 if not exist "Agent\.venv" (
-    echo 错误: 虚拟环境不存在
-    echo 请先运行 install-win.bat 安装依赖
+    echo Error: Virtual environment not found
+    echo Please run install-win.bat first
     pause
     exit /b 1
 )
 
-:: 激活虚拟环境
-echo 激活虚拟环境...
-Agent\.venv\Scripts\activate
+:: Activate virtual environment
+echo Activating virtual environment...
+call "Agent\.venv\Scripts\activate"
 if %errorlevel% neq 0 (
-    echo 错误: 激活虚拟环境失败
+    echo Error: Failed to activate virtual environment
     pause
     exit /b 1
 )
 
-:: 检查 nanobot 配置
+:: Check nanobot configuration
 if not exist "%USERPROFILE%\.nanobot\config.json" (
-    echo 警告: nanobot 配置文件不存在
-    echo 请运行 'nanobot onboard' 并配置 API 密钥
+    echo Warning: nanobot configuration file not found
+    echo Please run 'nanobot onboard' to configure API keys
     pause
 )
 
-:: 启动后端 API 服务器
-echo 启动后端 API 服务器...
-echo 后端服务将在 http://localhost:5678 上运行
-start "nanobot API" python Agent\mian_api.py
+:: Start backend API server
+echo Starting backend API server...
+echo Backend will run on http://localhost:5678
+start "nanobot API" python "Agent\mian_api.py"
 
-:: 等待后端服务启动
-echo 等待后端服务启动...
+:: Wait for backend to start
+echo Waiting for backend to start...
 ping 127.0.0.1 -n 5 > nul
 
-:: 启动前端开发服务器
-echo 启动前端开发服务器...
-echo 前端服务将在 http://localhost:3000 上运行
-cd chatbot-webui
+:: Start frontend development server
+echo Starting frontend development server...
+echo Frontend will run on http://localhost:3000
+cd "chatbot-webui"
 start "nanobot Web UI" npm run dev
 cd ..
 
 echo ================================
-echo 服务启动完成！
+echo Services started successfully!
 echo ================================
-echo 后端 API: http://localhost:5678
-echo 前端界面: http://localhost:3000
+echo Backend API: http://localhost:5678
+echo Frontend UI: http://localhost:3000
 echo ================================
-echo 按任意键退出...
+echo Press any key to exit...
 pause > nul
