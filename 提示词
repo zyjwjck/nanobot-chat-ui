@@ -1,0 +1,24 @@
+
+我正在将两个开源项目整合到一起，然后发布一个新的开源项目 nanobot-chat-ui：
+nanobot
+ollama-webui-lite（源于ollama-webui）。
+因为原本nanobot虽然很有效，但缺乏界面，不符合用户体验习惯。因此我基于nanobot生成一个api，对接到web对话界面上。
+
+源码我以及下载到本地了，请你深度阅读如下两个文档：
+F:\nanobot-chat-ui\nanobot\README.md
+F:\nanobot-chat-ui\chatbot-webui\README.md
+
+然后请你输出新的readme.md文件，介绍这个新的开源项目。
+新的readme.md文件保存路径：F:\nanobot-chat-ui
+新的readme.md文件需要明确说明nanobot、ollama-webui、ollama-webui-lite的来源和感谢。
+readme需要区分中英文，其中英文为主，英文可以点击跳转到中文，中文的名字：readme_zh.md
+
+
+根据你刚才的内容，请你完成如下任务：
+1、请你结合新的项目，整理出新的requirement.txt （注意必须是环境F:\nanobot-chat-ui\.venv里的）
+2、readme里面维护新增相关的安装、配置、启动步骤，包括前后端和智能体的配置。
+
+
+好了，貌似通了，nano已经可以通过glm进行对话了，我没有配置其他模型。请你帮我curl一下mian里面的接口，实现通过该接口和难哦bot的agent进行对话（背后是glm）。如果有错，请你修复程序。
+
+对话页面的左上角【class="font-medium text-ellipsis whitespace-nowrap overflow-hidden"】文字agent，应该显示对话标题，同【text-left self-center overflow-hidden w-[120px]】里面的文字
